@@ -81,3 +81,90 @@ ICs:	LMC660CN/NOPB, LM324N, UA741 op-amps
 Passive Components:	Resistors (10Ω to 510kΩ), capacitors (1.6nF to 100nF), diodes (1N4001G)
 
 Software:	Arduino IDE, MATLAB simulations
+
+5. Performance Results
+
+Power Analysis:
+
+Battery 1 (0V~9V): 44.5mA ~ 140mA → 0.4W ~ 1.26W
+
+Battery 2 (-9V~0V): ~3.7mA → 0.033W
+
+Motor (when used): ~0.3A → ~1.8W
+
+Overall (without motor): 0.043W ~ 1.29W
+
+Majority of power consumed by Arduino and output circuits
+
+Noise Analysis:
+
+ADC noise (electrodes disconnected): <5mV
+
+ADC noise (electrodes connected): ~20mV rms (due to electrode pick-up)
+
+Estimated SNR for the system: 36.9dB
+
+Signal Processing:
+
+MAV estimation through precision rectification and integration
+
+Step size: ~25 ADC counts per LED
+
+Saturation: Full LED bar activation at sensorValue ≥ 200
+
+6. Testing Methodology
+   
+1) Benchtop Testing:
+
+Tested each block individually using signal generator
+
+Verified frequency response and transient response through simulations
+
+Confirmed output after each processing stage
+
+2) Electrode Testing:
+
+sEMG recording from forearm muscles
+
+Appropriate electrode placement research and implementation
+
+Real-time signal acquisition and processing
+
+3) Output Verification:
+
+LED bar response to varying muscle contraction levels
+
+Buzzer activation at threshold
+
+Servo motor proportional control
+
+7. Ethical & Safety Considerations
+
+Electrical Safety: Electrodes used only with battery-powered system after supervisor check; avoided mains-powered connection to the body
+
+Risk Mitigation: On-body tests performed only on batteries with all mains instruments disconnected
+
+Supervisor Check: System inspected by laboratory supervisor before bio-signal measurements
+
+Privacy: EMG signals processed in real-time to prevent any privacy concerns
+
+8. What I Learned (My Contributions)
+Technical Contributions:
+
+Buzzer Control Implementation: Programmed the audio feedback system using Arduino, setting appropriate thresholds and ensuring reliable activation
+
+Output Integration: Worked on integrating multiple output modalities (LED, buzzer, servo) with the sEMG signal
+
+Testing & Debugging: Assisted in benchtop testing and verification of system blocks
+
+Code Optimization: Contributed to Arduino code development for responsive real-time control
+
+Team Collaboration:
+
+Worked alongside team members (Jiangtian, Mathis, Yifei) on different system components
+
+Participated in design discussions and decision-making processes
+
+Contributed to the 10-slide final presentation preparation
+
+Assisted in troubleshooting during electrode testing phase
