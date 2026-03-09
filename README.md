@@ -10,7 +10,6 @@ Electrical and Electronic Engineering student at UCL, expected graduation July 2
 ### 1. Battery-Powered Lifting System (Oct 2022)
 - Electromagnet coil optimization for AA/AAA batteries
 - 100+ repeatable lifts achieved
-- [Link to folder]
 
 ### 2. Autonomous Rescue Robot (May 2023)
 - C++ navigation logic for maze exploration
@@ -34,4 +33,4 @@ Electrical and Electronic Engineering student at UCL, expected graduation July 2
 
 ## 📞 Contact
 - Email: zceemkw@ucl.ac.uk
-- LinkedIn: [링크]
+- LinkedIn: [https://www.linkedin.com/in/minjae-kwon-544452265/]
