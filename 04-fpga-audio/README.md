@@ -1,14 +1,14 @@
-4. Real-Time Audio Descrambler (FPGA) (Dec 2025)
+Real-Time Audio Descrambler (FPGA) (Dec 2025)
 
 UCL ELEC0008 Scenario Project
 
-Project Overview
+1. Project Overview
 
 A real-time audio descrambler implemented on DE0 Nano FPGA to recover a secret scrambled message. 
 
 This project was part of a scenario where criminals used audio scrambling to hide their plans, and the goal was to descramble the intercepted message to prevent a robbery.
 
-Key Objectives
+2. Key Objectives
 
 Analyze scrambled audio signals in time and frequency domains using MATLAB
 
@@ -18,9 +18,9 @@ Implement real-time digital filters on FPGA
 
 Reconstruct clear audio from scrambled input
 
-Technical Implementation
+3. Technical Implementation
 
-1. Signal Analysis (MATLAB)
+1) Signal Analysis (MATLAB)
 
 Imported original and scrambled WAV files (44.1kHz sampling frequency)
 
@@ -30,7 +30,7 @@ Reverse-engineered the scrambling algorithm by comparing signal characteristics
 
 Determined appropriate filter specifications for descrambling
 
-2. Digital Filter Design
+2) Digital Filter Design
 
 Used MATLAB's filterDesigner tool to design FIR/IIR filters
 
@@ -40,7 +40,7 @@ Generated Verilog code for digital filters
 
 Selected optimal sampling frequency (50kHz) for high-fidelity reconstruction
 
-3. FPGA Implementation (DE0 Nano)
+3) FPGA Implementation (DE0 Nano)
 
 Implemented real-time FIR/IIR digital filters in Verilog
 
@@ -50,7 +50,7 @@ Integrated PLL block for clock generation
 
 Used Signal Tap Logic Analyzer to verify internal signals
 
-4. Hardware Integration
+4) Hardware Integratio
 
 Connected external ADC for scrambled audio input
 
@@ -60,17 +60,15 @@ Designed anti-aliasing analogue filters (Sallen-Key topology)
 
 Verified timing compliance with logic analyzer
 
-Technologies/Tools Used
+4. Technologies/Tools Used
 
-Category	Tools
+Analysis:	MATLAB (audioread, filterDesigner, FFT analysis)
 
-Analysis	MATLAB (audioread, filterDesigner, FFT analysis)
+FPGA Design:	Quartus II, Verilog HDL, Signal Tap Logic Analyzer
 
-FPGA Design	Quartus II, Verilog HDL, Signal Tap Logic Analyzer
+Hardware:	DE0 Nano FPGA, ADC, DAC, oscilloscope, logic analyzer
 
-Hardware	DE0 Nano FPGA, ADC, DAC, oscilloscope, logic analyzer
+Filters:	FIR/IIR digital filters, Sallen-Key active analogue filters
 
-Filters	FIR/IIR digital filters, Sallen-Key active analogue filters
-
-Communication	SPI protocol, PLL clock generation
+Communication:	SPI protocol, PLL clock generation
 
