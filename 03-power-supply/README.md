@@ -1,11 +1,11 @@
 Digital Power Supply System
 Project Period: Oct 2025 (Scenario Y) & Feb 2026 (Scenario Z) / Role: Lead Designer & Technical Analyst
 
-<Project Overview>
+1. Project Overview
 
 Designed a power supply circuit meeting strict customer specifications for voltage regulation and fault diagnosability, with optimization for 200-unit production.
 
-<Key Requirements>
+2. Key Requirements
 
 Output: 5V (±0.15V) and 12V (±0.8V)
 
@@ -17,7 +17,7 @@ Input Range: 0-30V (avoid ±10% of outputs)
 
 Weight: <25g
 
-<Technical Stack>
+3. Technical Stack
 
 Circuit Design: NI Multisim
 
@@ -25,7 +25,7 @@ PCB Layout: DipTrace
 
 Verification: Oscilloscope, Multimeter
 
-<My Contributions>
+4. My Contributions
 
 Circuit Design (Oct 2025)
 
@@ -37,12 +37,12 @@ Output ripple: 5V (45.47mV), 12V (15.36mV)
 
 My design ranked second highest in team and was selected as one of group's 2 final PCBs
 
-PCB Assembly & Verification (Feb 2026)
+5. PCB Assembly & Verification (Feb 2026)
 
 Assembled SMT components and debugged hardware issues
 Verified all requirements: output voltages, short circuit current, efficiency, ripple
 
-<Key Learnings>
+6. Key Learnings
 
 Technical: Corner-case analysis, PCB design rules, efficiency vs. safety trade-offs
 
