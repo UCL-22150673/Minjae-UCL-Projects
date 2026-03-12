@@ -2,13 +2,10 @@ Real-Time Audio Descrambler (FPGA) (Dec 2025)
 
 UCL ELEC0008 Scenario Project
 
-1. Project Overview
+Project Overview
+A real-time audio descrambler implemented on DE0 Nano FPGA to recover a secret scrambled message. This project was part of a scenario where criminals used audio scrambling to hide their plans, and the goal was to descramble the intercepted message to prevent a robbery.
 
-A real-time audio descrambler implemented on DE0 Nano FPGA to recover a secret scrambled message. 
-
-This project was part of a scenario where criminals used audio scrambling to hide their plans, and the goal was to descramble the intercepted message to prevent a robbery.
-
-2. Key Objectives
+Key Objectives
 
 Analyze scrambled audio signals in time and frequency domains using MATLAB
 
@@ -18,9 +15,9 @@ Implement real-time digital filters on FPGA
 
 Reconstruct clear audio from scrambled input
 
-3. Technical Implementation
+Technical Implementation
 
-1) Signal Analysis (MATLAB)
+Signal Analysis (MATLAB)
 
 Imported original and scrambled WAV files (44.1kHz sampling frequency)
 
@@ -30,7 +27,7 @@ Reverse-engineered the scrambling algorithm by comparing signal characteristics
 
 Determined appropriate filter specifications for descrambling
 
-2) Digital Filter Design
+Digital Filter Design
 
 Used MATLAB's filterDesigner tool to design FIR/IIR filters
 
@@ -40,7 +37,7 @@ Generated Verilog code for digital filters
 
 Selected optimal sampling frequency (50kHz) for high-fidelity reconstruction
 
-3) FPGA Implementation (DE0 Nano)
+FPGA Implementation (DE0 Nano)
 
 Implemented real-time FIR/IIR digital filters in Verilog
 
@@ -50,7 +47,7 @@ Integrated PLL block for clock generation
 
 Used Signal Tap Logic Analyzer to verify internal signals
 
-4) Hardware Integratio
+Hardware Integration
 
 Connected external ADC for scrambled audio input
 
@@ -60,15 +57,19 @@ Designed anti-aliasing analogue filters (Sallen-Key topology)
 
 Verified timing compliance with logic analyzer
 
-4. Technologies/Tools Used
+My Contribution
 
-Analysis:	MATLAB (audioread, filterDesigner, FFT analysis)
+I was responsible for the DAC interface validation and analog output verification. I successfully generated and smoothly output a 7 kHz sine wave, which was essential for confirming the system's fundamental analog output capabilities before processing actual audio signals. Maintaining the signal's smoothness demonstrated precise control over the DAC interface timing and SPI communication protocol. This validation step ensured that once the descrambling filters were applied, the reconstructed audio would be output without distortion or glitches. My work provided confidence that the hardware layer was reliable, allowing the team to focus on optimizing the digital filter performance.
 
-FPGA Design:	Quartus II, Verilog HDL, Signal Tap Logic Analyzer
+Technologies/Tools Used
 
-Hardware:	DE0 Nano FPGA, ADC, DAC, oscilloscope, logic analyzer
+Analysis: MATLAB (audioread, filterDesigner, FFT analysis)
 
-Filters:	FIR/IIR digital filters, Sallen-Key active analogue filters
+FPGA Design: Quartus II, Verilog HDL, Signal Tap Logic Analyzer
 
-Communication:	SPI protocol, PLL clock generation
+Hardware: DE0 Nano FPGA, ADC, DAC, oscilloscope, logic analyzer
+
+Filters: FIR/IIR digital filters, Sallen-Key active analogue filters
+
+Communication: SPI protocol, PLL clock generation
 
