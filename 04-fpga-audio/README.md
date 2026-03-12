@@ -18,7 +18,7 @@ Reconstruct clear audio from scrambled input
 
 3. Technical Implementation
 
-1) Signal Analysis (MATLAB)
+(1) Signal Analysis (MATLAB)
 
 Imported original and scrambled WAV files (44.1kHz sampling frequency)
 
@@ -28,7 +28,7 @@ Reverse-engineered the scrambling algorithm by comparing signal characteristics
 
 Determined appropriate filter specifications for descrambling
 
-2) Digital Filter Design
+(2) Digital Filter Design
 
 Used MATLAB's filterDesigner tool to design FIR/IIR filters
 
@@ -38,7 +38,7 @@ Generated Verilog code for digital filters
 
 Selected optimal sampling frequency (50kHz) for high-fidelity reconstruction
 
-3) FPGA Implementation (DE0 Nano)
+(3) FPGA Implementation (DE0 Nano)
 
 Implemented real-time FIR/IIR digital filters in Verilog
 
@@ -48,7 +48,7 @@ Integrated PLL block for clock generation
 
 Used Signal Tap Logic Analyzer to verify internal signals
 
-4) Hardware Integration
+(4) Hardware Integration
 
 Connected external ADC for scrambled audio input
 
