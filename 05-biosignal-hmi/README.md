@@ -1,7 +1,5 @@
 Bio-signal Human Machine Interface (HMI) (Jan 2026)
 
-UCL ELEC0008 Scenario W Project | Group 1
-
 1. Project Overview
 
 A bio-potential acquisition system designed to extract microvolt-level surface Electromyography (sEMG) signals from muscle activity and convert them into intuitive control signals for human-machine interaction. This project was developed as part of the Scenario W assessment at UCL, where we built a prototype HMI that produces audio-visual outputs correlated with the user's muscle activity.
