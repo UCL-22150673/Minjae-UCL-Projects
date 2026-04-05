@@ -1,7 +1,5 @@
 Real-Time Audio Descrambler (FPGA) (Dec 2025)
 
-UCL ELEC0008 Scenario Project
-
 1. Project Overview
    
 A real-time audio descrambler implemented on DE0 Nano FPGA to recover a secret scrambled message. This project was part of a scenario where criminals used audio scrambling to hide their plans, and the goal was to descramble the intercepted message to prevent a robbery.
